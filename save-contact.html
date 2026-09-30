@@ -3,16 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Save Yenileys Garcia Contact</title>
+  <title>Save Yenileys Garcia</title>
 </head>
 <body>
-<script>
-  const vcard =
-    "https://josegarciaprize-cell.github.io/Yenileys-business-card/Yenileys-Garcia-Contact.vcf?v=2";
 
-  window.location.replace(vcard);
+<script>
+const isAndroid = /Android/i.test(navigator.userAgent);
+
+if (!isAndroid) {
+  window.location.replace(
+    "https://josegarciaprize-cell.github.io/Yenileys-business-card/Yenileys-Garcia-Contact.vcf?v=2"
+  );
+}
 </script>
 
-<p>Opening contact...</p>
+<div id="android" style="display:none; font-family:Arial,sans-serif; text-align:center; padding:35px 20px;">
+  <h1>Yenileys Garcia</h1>
+  <h2>Purchasing Manager</h2>
+  <p>Metallic Products LLC</p>
+
+  <p><strong>Office:</strong> (305) 953-8993</p>
+  <p><strong>Extension:</strong> 3106</p>
+  <p><strong>Email:</strong> Yenig@metallicproductsllc.com</p>
+  <p>3965 E 10th Ct<br>Hialeah, FL 33013</p>
+
+  <a href="https://josegarciaprize-cell.github.io/Yenileys-business-card/Yenileys-Garcia-Contact.vcf?v=2"
+     style="display:inline-block; margin-top:20px; padding:16px 28px;
+     background:#111; color:white; text-decoration:none;
+     border-radius:8px; font-size:18px;">
+     Add to Contacts
+  </a>
+
+  <p style="margin-top:20px; font-size:14px;">
+    Tap “Add to Contacts,” then open the downloaded contact file to import it.
+  </p>
+</div>
+
+<script>
+if (isAndroid) {
+  document.getElementById("android").style.display = "block";
+}
+</script>
+
 </body>
 </html>
